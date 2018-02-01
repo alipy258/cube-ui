@@ -103,7 +103,11 @@
           this.trigger = true
         }
         if (this.isValid.every(item => item)) {
-          console.log('submited')
+          this.$createToast({
+            type: 'correct',
+            txt: 'Submited',
+            time: 1000
+          }).show()
         }
       }
     },
